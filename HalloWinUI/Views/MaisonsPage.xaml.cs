@@ -55,10 +55,14 @@ namespace HalloWinUI.Views
 
         private void BtnAjouter_Click(object sender, RoutedEventArgs e)
         {
-            ViewModel.NouvelleMaison = nouvelleMaisonTextBox.Text;
-            ViewModel.AjouterMaison();
+            // TODO: utiliser viewmodel pour la vérification
+            if (nouvelleMaisonTextBox.Text != "")
+            {
+                ViewModel.NouvelleMaison = nouvelleMaisonTextBox.Text;
+                ViewModel.AjouterMaison();
 
-            nouvelleMaisonTextBox.Text = "";
+                nouvelleMaisonTextBox.Text = "";
+            }
         }
     }
 }
