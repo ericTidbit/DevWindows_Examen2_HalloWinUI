@@ -49,7 +49,7 @@ namespace HalloWinUI.Views
             // Si l'utilisateur a cliqué sur le bouton "Supprimer"
             if (result == ContentDialogResult.Primary)
             {
-                
+                ViewModel.SupprimerMaison();
             }
         }
 
