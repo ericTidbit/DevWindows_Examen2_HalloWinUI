@@ -1,8 +1,10 @@
 using HalloWinUI.Data;
+using HalloWinUI.Models;
 using HalloWinUI.ViewModels.Pages;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using System;
+using System.Diagnostics;
 
 namespace HalloWinUI.Views
 {
@@ -53,7 +55,10 @@ namespace HalloWinUI.Views
 
         private void BtnAjouter_Click(object sender, RoutedEventArgs e)
         {
+            ViewModel.NouvelleMaison = nouvelleMaisonTextBox.Text;
+            ViewModel.AjouterMaison();
 
+            nouvelleMaisonTextBox.Text = "";
         }
     }
 }
