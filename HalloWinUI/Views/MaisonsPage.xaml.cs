@@ -50,5 +50,10 @@ namespace HalloWinUI.Views
                 
             }
         }
+
+        private void BtnAjouter_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
