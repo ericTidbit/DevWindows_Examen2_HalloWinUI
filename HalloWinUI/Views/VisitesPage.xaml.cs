@@ -23,5 +23,10 @@ namespace HalloWinUI.Views
             // Recharger les données à chaque navigation
             ViewModel.ChargerDonnees();
         }
+
+        private void Enfant_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ViewModel.ChargerMaisonsVisitees();
+        }
     }
 }

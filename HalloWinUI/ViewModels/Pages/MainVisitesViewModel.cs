@@ -51,7 +51,7 @@ namespace HalloWinUI.ViewModels.Pages
             }
         }
 
-        private void ChargerMaisonsVisitees()
+        public void ChargerMaisonsVisitees()
         {
             MaisonsVisitees.Clear();
             if (EnfantSelectionne != null)

@@ -27,8 +27,9 @@
                 Width="300"
                 HorizontalAlignment="Left"
                 DisplayMemberPath="Nom"
-                ItemsSource=""
-                SelectedValue="" />
+                ItemsSource="{x:Bind ViewModel.Enfants, Mode=OneWay}"
+                SelectedValue="{x:Bind ViewModel.EnfantSelectionne, Mode=TwoWay}"
+                SelectionChanged="Enfant_SelectionChanged"/>
         </StackPanel>
 
         <Grid Grid.Row="2">
