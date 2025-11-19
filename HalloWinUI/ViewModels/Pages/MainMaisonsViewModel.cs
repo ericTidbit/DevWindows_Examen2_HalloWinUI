@@ -18,12 +18,16 @@ namespace HalloWinUI.ViewModels.Pages
                 if (_maisonSelectionnee != value)
                 {
                     _maisonSelectionnee = value;
+                    // TODO: Binding twoway ==> RaisePrpertyChanged()
                 }
             }
         }
 
         public ObservableCollection<MaisonViewModel> Maisons { get; }
 
+        // TODO: RaisePropertyChanged ici aussi, après avoir fait le binding dans xaml.
+        //          C'est cette propriété qui doit être ajoutée à
+        //          Maisons dans une méthode Ajouter.
         public string NouvelleMaison { get; set; }
 
         public MainMaisonsViewModel(IHalloweenDataProvider dataProvider)
@@ -56,6 +60,7 @@ namespace HalloWinUI.ViewModels.Pages
 
         public void AjouterMaison()
         {
+            // TODO: != null -> IsNullOrWhiteSpace pour éviter d'ajouter les espaces vides aussi.
             if (NouvelleMaison != null)
             {
                 // TODO: utiliser le DataProvider

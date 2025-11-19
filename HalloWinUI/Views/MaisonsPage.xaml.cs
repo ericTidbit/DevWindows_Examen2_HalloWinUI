@@ -55,12 +55,17 @@ namespace HalloWinUI.Views
 
         private void BtnAjouter_Click(object sender, RoutedEventArgs e)
         {
-            // TODO: utiliser viewmodel pour la vérification
+            // TODO: Utiliser viewmodel pour la vérification. Tout le traitement de données dans ViewModel.
+            //      Côté code behind on garde un minimum de manpulation (ex.: événements UI, minimum de manipulations
+            //      d'éléments xaml, appels méthodes du ViewModel)
             if (nouvelleMaisonTextBox.Text != "")
             {
+                // TODO: Pas be binding manuel, laisser x:Bind le faire!
                 ViewModel.NouvelleMaison = nouvelleMaisonTextBox.Text;
                 ViewModel.AjouterMaison();
 
+                // TODO: Côté ViewModel, NouvelleMaison doit être mise
+                //          à jour VIA BINDING. Ce n'est pas le cas actuellement.
                 nouvelleMaisonTextBox.Text = "";
             }
         }
